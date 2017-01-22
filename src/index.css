@@ -1,0 +1,18 @@
+html, body {
+	height: 100%;
+	min-height: auto;
+}
+body {
+	font-family: 'Open Sans', sans-serif !important;
+	padding: 0;
+	margin: 0;
+}
+.bold {
+	font-weight: bold;
+}
+.table > tbody > tr.active > td {
+	font-weight: bold;
+}
+.fright {
+	float: right;
+}

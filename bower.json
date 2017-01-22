@@ -1,0 +1,11 @@
+{
+  "name": "webmailjs",
+  "description": "A tiny webmail written in JS",
+  "version": "0.1.0",
+  "homepage": "https://github.com/malahx/WebMailJS",
+  "license": "GPL",
+  "private": true,
+  "dependencies": {
+    "open-sans-fontface": "*"
+  }
+}
