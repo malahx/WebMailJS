@@ -1,0 +1,21 @@
+{
+  "name": "webmailjs-mockup",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A tiny webmail written in JS",
+  "repository": "https://github.com/malahx/WebMailJS",
+  "license": "GPL",
+  "dependencies": {
+  	"bootstrap": "*"
+  },
+  "devDependencies": {
+	 "bower": "*"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "update-deps": "npm update",
+    "postupdate-deps": "bower update",
+    "update-deps": "npm update",
+    "prestart": "npm install"
+  }
+}

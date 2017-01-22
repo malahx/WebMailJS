@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WebMailJS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
+</head>
+<style>
+    .bold {
+        font-weight: bold;
+    }
+    body {
+        font-family: 'Open Sans', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
+    .table > tbody > tr.active > td {
+       font-weight: bold;
+   }
+   html, body {
+    height: 100%;
+    min-height: auto;
+}
+.sidenav, main {
+    height: calc(100vh - 82px);
+}
+main .col-sm-2, main .col-sm-10 {
+   padding-left: 0;
+   padding-right: 0;
+}
+.sidenav .table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+.fright {
+  float: right;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+  padding-top: 20px;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 20px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+}
+.row.content {height: auto;} 
+}
+</style>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">WebMailJS</a>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-success navbar-btn btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ecrire</button>
+                        <button class="btn btn-info navbar-btn btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                        <button class="btn btn-primary navbar-btn  btn-sm"><i class="fa fa-cog" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-8 btn-group">
+                    <button class="btn btn-default navbar-btn btn-sm disabled"><i class="fa fa-check" aria-hidden="true"></i></button>
+                    <button class="btn btn-warning navbar-btn btn-sm disabled"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></button>
+                    <button class="btn btn-danger navbar-btn btn-sm disabled"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
+                <form class="col-sm-2 navbar-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Rechercher">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-2 sidenav">
+                <table class="table table-condensed table-hover">
+                    <thead><tr><th><i class="fa fa-envelope" aria-hidden="true"></i> Messages</th></tr></thead>
+                    <tbody>
+                        <tr class="active"><td><i class="fa fa-envelope-o" aria-hidden="true"></i> Non lu <span class="badge fright">12</span></td></tr>
+                        <tr><td><i class="fa fa-envelope-open-o" aria-hidden="true"></i> Lu</td></tr>
+                        <tr><td><i class="fa fa-send-o" aria-hidden="true"></i> Envoyé</td></tr>
+                        <tr><td><i class="fa fa-hand-paper-o" aria-hidden="true"></i> Spam</td></tr>
+                        <tr><td><i class="fa fa-trash-o" aria-hidden="true"></i> Corbeille</td></tr>
+                    </tbody>
+                </table>
+                <table class="table table-condensed table-hover">
+                    <thead><tr><th><i class="fa fa-folder" aria-hidden="true"></i> Dossiers</th></tr></thead>
+                    <tbody>
+                        <tr><td><i class="fa fa-folder-o" aria-hidden="true"></i> Travail</td></tr>
+                        <tr><td><i class="fa fa-folder-o" aria-hidden="true"></i> Famille</td></tr>
+                        <tr><td><i class="fa fa-folder-o" aria-hidden="true"></i> Amis</td></tr>
+                    </tbody>
+                </table>
+                <table class="table table-condensed table-hover">
+                    <thead><tr><th><i class="fa fa-user-circle-o" aria-hidden="true"></i> Comptes</th></tr></thead>
+                    <tbody>
+                        <tr><td><i class="fa fa-user-circle" aria-hidden="true"></i> malah@malah.fr <span class="badge fright">12</span></td></tr>
+                        <tr><td><i class="fa fa-user-circle" aria-hidden="true"></i> jean@jean.fr</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-10">
+                <table class="table table-condensed table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th><i class="fa fa-tag" aria-hidden="true"></i></th>
+                            <th>De</th>
+                            <th>Sujet</th>
+                            <th>Taille</th>
+                            <th>Envoyé</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bold">
+                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                            <td>truc@machin.fr</td>
+                            <td>Tincidunt, turpis sed séllicitudén facîlisis suscipit vehiculâ éléfantid donec conubié
+                                tempès
+                                rhoncüs class arcû, magnès lilitoxic vulputaté libero venenatis eget lectus !
+                            </td>
+                            <td>8 ko</td>
+                            <td>jeu. 17 janv.</td>
+                        </tr>
+                        <tr class="bold">
+                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                            <td>truc@machin.fr</td>
+                            <td>Tincidunt, turpis sed séllicitudén facîlisis suscipit vehiculâ éléfantid donec conubié
+                                tempès
+                                rhoncüs class arcû, magnès lilitoxic vulputaté libero venenatis eget lectus !
+                            </td>
+                            <td>8 ko</td>
+                            <td>jeu. 17 janv.</td>
+                        </tr>
+                        <tr class="bold">
+                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                            <td>truc@machin.fr</td>
+                            <td>Tincidunt, turpis sed séllicitudén facîlisis suscipit vehiculâ éléfantid donec conubié
+                                tempès
+                                rhoncüs class arcû, magnès lilitoxic vulputaté libero venenatis eget lectus !
+                            </td>
+                            <td>8 ko</td>
+                            <td>jeu. 17 janv.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid">
+    </footer>
+</body>
+</html>
