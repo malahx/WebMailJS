@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <Header/>
           <Grid fluid>
-            <Row className="content">
+            <Row>
               <Sidebar/>
               <Content/>
             </Row>

@@ -6,7 +6,7 @@ import FA from 'react-fontawesome';
 class Content extends Component {
   render() {
     return (
-        <Col lg={10}>
+        <Col lg={10} className="content">
             <Table condensed hover striped>
                 <thead>
                     <tr>
