@@ -1,16 +1,16 @@
 WebMailJS
 ========
 
-A tiny webmail in Javascript
+A tiny webmail in Javascript (in developpment)
 
 ## Language / Framework :
 
-* HTML/CSS,
-* JSX / ES6,
-* React (react-bootstrap, react-fontawesome),
-* Babel.
+* HTML5 / CSS3,
+* React 15.4 (react-bootstrap, react-fontawesome),
+* JSX / ES6 Babel.
 
-##Usage :
+## Usage :
 
 `npm install`
+
 `npm start`
