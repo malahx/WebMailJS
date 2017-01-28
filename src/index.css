@@ -11,8 +11,8 @@ body {
 	font-weight: bold;
 }
 .table > tbody > tr.active > td {
-	font-weight: bold;
+	font-weight: bold !important;
 }
-.fright {
+.f-right {
 	float: right;
 }

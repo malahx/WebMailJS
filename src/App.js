@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Grid, Row } from 'react-bootstrap';
 import './App.css';
 import Header from './component/Header';
 import Sidebar from './component/Sidebar';
@@ -10,12 +11,12 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <main class="container-fluid">
-          <div class="row">
+          <Grid fluid>
+            <Row>
               <Sidebar/>
               <Content/>
-          </div>
-        </main>
+            </Row>
+          </Grid>
         <Footer/>
       </div>
     );

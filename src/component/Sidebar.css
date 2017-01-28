@@ -1,0 +1,23 @@
+.sidenav .table {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+.row.content {
+    height: auto !important;
+}
+.sidenav {
+    background-color: #f1f1f1;
+    padding-top: 20px;
+    height: calc(100vh - 82px);
+}
+.col-sm-2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+@media screen and (max-width: 767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+}
